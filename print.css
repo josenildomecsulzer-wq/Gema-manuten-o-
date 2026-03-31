@@ -1,0 +1,22 @@
+/* =============================================
+   print.css — Print / PDF styles
+   ============================================= */
+
+#print-area { display: none; }
+
+@media print {
+  body { background: #fff !important; color: #000 !important; overflow: visible !important; display: block !important; }
+  .sidebar, .topbar, .tabs, .btn, input[type=date], .form-actions, .card-header > div:last-child { display: none !important; }
+  .main { margin-left: 0 !important; height: auto !important; overflow: visible !important; }
+  .content { overflow: visible !important; padding: 0 !important; }
+  .page { display: none !important; }
+  #print-area { display: block !important; }
+  .card, .stat-card { background: #fff !important; border: 1px solid #ccc !important; break-inside: avoid; }
+  th, td { color: #000 !important; border-color: #ccc !important; }
+  .stat-label, .stat-sub, .text-muted { color: #555 !important; }
+  .stat-value { color: #000 !important; }
+  .badge { border: 1px solid #999 !important; color: #000 !important; background: #eee !important; }
+  .badge::before { display: none !important; }
+  .table-code { background: #eee !important; color: #000 !important; }
+  .progress-bar, .progress-fill { display: none !important; }
+}
